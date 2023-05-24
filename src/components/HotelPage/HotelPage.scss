@@ -1,0 +1,10 @@
+@import "../../variables.scss";
+
+.side_about-box.shadowed_box {
+  transition: 0.3s;
+}
+.price_error {
+  text-align: center;
+  font-size: 20px;
+  color: $black;
+}

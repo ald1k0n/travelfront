@@ -1,0 +1,32 @@
+.info_label {
+  font-size: 12px;
+  color: #8d939b;
+  font-family: GT Walsheim Pro;
+}
+
+.days {
+  color: #2569d7;
+  font-family: GT Walsheim Pro;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bordered_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 16px 12px 16px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid #5eb215;
+  color: #5eb215;
+  font-weight: 500;
+}
+.newComforts {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}

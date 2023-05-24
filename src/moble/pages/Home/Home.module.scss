@@ -1,0 +1,129 @@
+.preview {
+  width: 100%;
+  height: 224px;
+  background-image: url("../../../assets/mobile_preview.png");
+  background-repeat: no-repeat;
+  background-size: 100% 224px;
+  object-fit: cover;
+}
+.tour_container {
+  width: 100%;
+  height: 427px;
+  background: #fff;
+  border-radius: 32px;
+  position: absolute;
+  top: 242px;
+  padding: 24px 16px 32px;
+  font-family: GT Walsheim Pro;
+  box-shadow: 0px 24px 14px rgba(73, 106, 158, 0.01),
+    0px 11px 11px rgba(73, 106, 158, 0.02), 0px 3px 6px rgba(68, 82, 106, 0.03),
+    0px 4px 36px rgba(99, 120, 154, 0.12),
+    inset 0px 0px 8px rgba(160, 167, 179, 0.24);
+  border: 1px solid rgba(41, 45, 50, 0.04);
+
+  .tour_title {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .nav_btns_container {
+    margin-top: 17px;
+    display: flex;
+    gap: 12px;
+    overflow: auto;
+    font-size: 12px;
+    .nav_btn {
+      padding-bottom: 8px;
+      padding-left: 16px;
+      padding-right: 16px;
+      background-color: #5eb21514;
+      text-align: center;
+      border-radius: 16px;
+      color: #5eb215;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      cursor: pointer;
+      path,
+      svg {
+        stroke: rgba(94, 178, 21, 1);
+      }
+    }
+
+    .active {
+      background-color: #5eb215;
+      color: #fff;
+
+      path,
+      svg {
+        stroke: #fff;
+      }
+    }
+  }
+}
+
+.inputs {
+  margin-top: 15px;
+  .input {
+    background: rgba(191, 196, 203, 0.08);
+    padding: 8px, 12px, 8px, 12px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 46px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(191, 196, 203, 0.08);
+    border-radius: 16px;
+    gap: 10px;
+
+    .field {
+      font-size: 14px;
+      margin-left: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      input {
+        border: none;
+        background: transparent;
+      }
+    }
+  }
+}
+
+.input_who {
+  margin-top: 12px;
+  width: 100%;
+  height: 46px;
+  background: rgba(191, 196, 203, 0.08);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .holiday {
+    width: 100px;
+    border: none;
+    background: rgba(191, 196, 203, 0.08);
+  }
+}
+
+.tag_content {
+  margin-top: 45vh;
+  padding: 0 18px;
+}

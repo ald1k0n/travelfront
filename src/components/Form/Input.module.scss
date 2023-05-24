@@ -1,0 +1,19 @@
+.primary_input {
+  padding: 15px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(249, 249, 249, 1);
+  &:focus {
+    outline: none;
+  }
+  option,
+  select {
+    font-family: GT Walsheim Pro;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(141, 147, 155, 1);
+  }
+}

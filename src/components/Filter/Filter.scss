@@ -1,0 +1,85 @@
+@import "../../variables.scss";
+
+.filter_box {
+  width: 340px;
+  background-color: #fff;
+}
+
+.price-col-text {
+  font-family: GT Walsheim Pro;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* SORT */
+
+.sort-box {
+  position: relative;
+}
+
+.sort-dropdown {
+  width: 100%;
+  border-radius: 16px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: solid 1px rgba(37, 105, 215, 1);
+  overflow: hidden;
+}
+
+.sort-option {
+  color: rgba(37, 105, 215, 1);
+  font-family: GT Walsheim Pro;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  padding: 15px;
+  background-color: #fff;
+  transition: 0.2s;
+  &:hover {
+    background-color: rgba(37, 105, 215, 0.141);
+  }
+}
+
+/* Check Button */
+
+.check-btn {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background-color: rgba(190, 190, 190, 0.24);
+}
+.filter_destination,
+.filter_dateRange,
+.filter_userAmount {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .filter_divider {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(217, 217, 217, 1);
+  }
+}
+
+.users {
+  margin-top: 25px;
+}
+
+.filter_btn {
+  cursor: pointer;
+  transition: 0.2s;
+  color: $black;
+  &:hover {
+    color: #000;
+  }
+}

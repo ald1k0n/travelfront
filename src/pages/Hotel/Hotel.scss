@@ -1,0 +1,617 @@
+@import "../../variables.scss";
+
+.hotel_page {
+  background-color: #ebebeb;
+}
+
+.hotel_container.container {
+  max-width: 1200px;
+}
+
+.hotel_side-checksum {
+  margin: 16px 0 4px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: GT Walsheim Pro;
+  color: rgba(41, 45, 50, 1);
+}
+
+.hotel_side-extraPlace {
+  padding-left: 5px;
+  margin-bottom: 20px;
+  color: rgba(81, 85, 91, 1);
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(41, 45, 50, 1);
+  span {
+    font-family: GT Walsheim Pro;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.06em;
+  }
+}
+
+.price_span {
+  font-family: GT Walsheim Pro;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+.hotel_page_top {
+  display: flex;
+  column-gap: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 36px 0px rgba(99, 120, 154, 0.12);
+
+  box-shadow: 0px 3px 6px 0px rgba(68, 82, 106, 0.03);
+
+  box-shadow: 0px 11px 11px 0px rgba(73, 106, 158, 0.02);
+
+  box-shadow: 0px 24px 14px 0px rgba(73, 106, 158, 0.01);
+
+  box-shadow: 0px 0px 8px 0px rgba(160, 167, 178, 0.24);
+}
+
+.hotel_page {
+  min-height: 90vh;
+}
+
+.top_name {
+  font-family: GT Walsheim Pro;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000;
+}
+
+.hotel_wrapper.wrapper.ver {
+  align-items: unset;
+}
+
+.hotel_page-rooms_counter {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.hotel_page-rooms {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+
+  .hotel_page-rooms_hotel {
+    width: 100%;
+    cursor: pointer;
+    padding: 5px;
+    .slider_rooms {
+      margin-bottom: 40px;
+      padding: 0 10px;
+    }
+
+    &.activeRoom {
+      outline: 2px solid $base-green;
+      border-radius: 16px;
+    }
+  }
+}
+
+.hotel_main_container.container {
+  margin: 0;
+}
+
+.hotel_side_container.container {
+  margin: 0;
+  height: unset;
+}
+
+.hotel_side_wrapper.wrapper.ver {
+  display: unset;
+  max-width: 27%;
+  row-gap: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel_page_wrapper.wrapper {
+  align-items: stretch;
+  column-gap: 16px;
+}
+
+.side_exc-box {
+  .body_title-box {
+    text-align: center;
+    justify-content: center;
+  }
+  .body_title {
+    text-align: center;
+  }
+  .body_title-text {
+    text-align: center;
+  }
+}
+
+/* MAIN COLUMN */
+
+.hotel_main_wrapper.wrapper.ver {
+  max-width: 70%;
+  align-items: flex-start;
+  row-gap: 16px;
+}
+
+/* MAIN TOP */
+
+.hotel_page_top {
+  width: 100%;
+}
+
+.top_content {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  color: rgba(15, 18, 24, 0.612);
+}
+
+.hotel_img-box {
+  width: 63%;
+  .gen_img-box {
+    max-width: 100%;
+  }
+}
+
+.top_heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.top_location-row {
+  margin-bottom: 16px;
+}
+
+.top_location-box {
+  display: flex;
+  column-gap: 10px;
+  align-items: flex-start;
+  font-family: GT Walsheim Pro;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.top_location-btn.primary-btn {
+  text-align: left;
+  column-gap: 10px;
+  font-family: GT Walsheim Pro;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  padding: 8px 15px;
+  border-radius: 8px;
+  img {
+    width: 20px;
+  }
+}
+
+.top_desc-row {
+  margin-bottom: 30px;
+}
+
+.desc_title {
+  font-family: GT Walsheim Pro;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(41, 45, 50, 1);
+  margin-bottom: 4px;
+}
+
+.desc_box {
+  font-family: GT Walsheim Pro;
+  font-size: $base-font;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(41, 45, 50, 0.5);
+  margin-bottom: 14px;
+}
+
+/* Services */
+
+.services_box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 20px;
+  column-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.services_col-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 8px;
+  font-family: GT Walsheim Pro;
+  font-size: $base-font;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 1px;
+  text-align: left;
+  img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.services_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  margin-left: 36px;
+  li {
+    font-family: GT Walsheim Pro;
+    font-size: $base-font;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: left;
+    color: rgba(81, 85, 91, 1);
+  }
+}
+
+/* Anchor */
+
+.hotel_anchor {
+  font-family: GT Walsheim Pro;
+  text-decoration: underline;
+  font-size: $base-font;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(37, 105, 215, 1);
+}
+
+.hotel_name {
+  font-family: GT Walsheim Pro;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.4000000059604645px;
+  text-align: left;
+  color: rgba(41, 45, 50, 1);
+}
+
+.hotel_img-main {
+  border-radius: 16px;
+  width: 100%;
+}
+
+.top_img-box {
+  min-width: 65%;
+}
+
+.top_tags-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 8px;
+}
+
+.hotel_tag {
+  font-family: GT Walsheim Pro;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.01em;
+  text-align: left;
+
+  padding: 9px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 4px;
+  border-radius: 8px;
+  color: rgba(37, 105, 215, 1);
+  background-color: rgba(56, 128, 243, 0.04);
+  img {
+    width: 20px;
+  }
+}
+
+.body_title-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.body_title {
+  font-family: GT Walsheim Pro;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 1px;
+  text-align: left;
+
+  margin-bottom: 4px;
+  color: rgba(37, 52, 61, 1);
+}
+
+/* GENERAL INFO BOX */
+
+.hotel_page-gen {
+  row-gap: 36px;
+  display: flex;
+  flex-direction: column;
+  .body_title {
+    margin-bottom: 12px;
+  }
+}
+
+.body_title-text {
+  font-family: GT Walsheim Pro;
+  font-size: $base-font;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: rgba(85, 85, 85, 1);
+}
+
+.chosen_room-box {
+  margin-top: 20px;
+}
+
+.schedule-row.row {
+  justify-content: flex-start;
+  column-gap: 37px;
+}
+.schedule-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 10px;
+}
+
+.gen_info-row {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.desc-row {
+  color: rgba(85, 85, 85, 1);
+}
+
+.food-row.row {
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 10px;
+  font-family: GT Walsheim Pro;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: left;
+  span {
+    font-family: GT Walsheim Pro;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: left;
+    color: rgba(85, 85, 85, 1);
+  }
+}
+
+/* SIDE COLUMN */
+
+.hotel_side-top .side-top-bot {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 14px;
+  padding-top: 18px;
+  border-top: solid 1px rgba(41, 45, 50, 0.04);
+  font-family: GT Walsheim Pro;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  white-space: nowrap;
+  color: rgba(37, 105, 215, 1);
+
+  div {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 5px;
+  }
+}
+
+.hotel_side-top {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.hotel_side-title {
+  font-family: GT Walsheim Pro;
+  padding-bottom: 16px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000;
+  border-bottom: solid 1px $thin-gray;
+}
+
+.hotel_side-row.total {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  border-top: dashed 1px $thin-gray;
+  border-radius: 0;
+
+  span {
+    color: $base-blue;
+    font-family: GT Walsheim Pro;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: right;
+  }
+}
+
+.hotel_side-row {
+  background: rgba(249, 249, 249, 1);
+  border: dotted 1px rgba(37, 105, 215, 1);
+  border-radius: 16px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 8px;
+}
+
+.kids_box {
+  img {
+    width: 100%;
+  }
+}
+.more-btn {
+  font-family: GT Walsheim Pro;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(105, 108, 112, 1);
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+.hotel_ad_top.shadowed_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 0;
+  row-gap: 25px;
+}
+
+.hotel_ad_wrapper {
+  max-width: 168px;
+  row-gap: 20px;
+}
+
+.hotel_ad-box.shadowed_box {
+  padding: 0;
+}
+
+.program_day-box.shadowed_box.small {
+  overflow-y: hidden;
+  height: 50px;
+  &.high {
+    height: fit-content;
+  }
+}
+
+/* Food */
+
+.food_tag {
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-family: GT Walsheim Pro;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  text-align: left;
+
+  &.notincl {
+    color: rgba(217, 56, 24, 1);
+    background-color: rgba(217, 56, 24, 0.08);
+  }
+
+  &.incl {
+    color: rgba(94, 178, 21, 1);
+    background-color: rgba(94, 178, 21, 0.08);
+  }
+
+  &.allIn {
+    color: #2569d7;
+    background-color: #659ffe0f;
+  }
+}
+
+.hotel_food-row {
+  .body_title-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+  .body_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 12px;
+  }
+}
+
+.food_price-form {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 40px;
+
+  .primary-input {
+    max-width: 220px;
+  }
+  .filter_content {
+    white-space: nowrap;
+    font-family: GT Walsheim Pro;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.food_prices {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}

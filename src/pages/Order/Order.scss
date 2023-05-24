@@ -1,0 +1,184 @@
+.order_title {
+  font-family: GT Walsheim Pro;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: 36px;
+}
+
+.order_main_wrapper.wrapper.ver {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.contacts_form {
+  width: 100%;
+  margin-bottom: 16px;
+  .body_title {
+    margin-bottom: 20px;
+  }
+}
+
+.input_box {
+  .input_title {
+    margin-bottom: 8px;
+  }
+  ::placeholder {
+    font-family: GT Walsheim Pro;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(81, 85, 91, 1);
+  }
+  &.textarea {
+    width: 100%;
+    textarea {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  input,
+  textarea {
+    min-width: 240px;
+    padding: 15px;
+    border-radius: 16px;
+    background-color: rgba(249, 249, 249, 1);
+  }
+  input.icon {
+    padding: 14px 14px 14px 40px;
+  }
+}
+
+.input_row.row {
+  width: 100%;
+  justify-content: flex-start;
+  column-gap: 60px;
+  margin-bottom: 20px;
+}
+
+.note_row.row {
+  justify-content: flex-start;
+  column-gap: 10px;
+}
+
+.note_wrapper.wrapper {
+  align-items: flex-start;
+  justify-content: flex-start;
+  column-gap: 12px;
+  align-items: unset;
+}
+
+.note_box.shadowed_box {
+  cursor: pointer;
+  border: 1px solid rgba(41, 45, 50, 0.04);
+  width: 50%;
+  height: fit-content;
+  .arrow {
+    transition: 0.2s;
+  }
+  .note_content {
+  }
+  &.full {
+    .note_content {
+      height: 0;
+      overflow-y: hidden;
+    }
+    .note_title {
+      margin-bottom: 0;
+    }
+    .arrow {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.note_title {
+  font-family: GT Walsheim Pro;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(94, 178, 21, 1);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 16px;
+  column-gap: 16px;
+}
+
+.order_form {
+  column-gap: 20px;
+  .primary-btn {
+    white-space: nowrap;
+    padding: 20px 72px;
+  }
+}
+
+.order_side_wrapper {
+  max-width: 360px;
+}
+
+.order_all_wrapper.wrapper {
+  column-gap: 20px;
+  align-items: flex-start;
+}
+
+.how_title {
+  font-family: GT Walsheim Pro;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.side-top-bot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 14px;
+  font-family: GT Walsheim Pro;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+
+.check.row {
+  justify-content: flex-start;
+  column-gap: 20px;
+}
+
+.input_title {
+  font-family: GT Walsheim Pro;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.how_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 32px;
+  .input_title {
+    margin-bottom: 4px;
+  }
+}

@@ -1,0 +1,15 @@
+.hot_container {
+  width: 100%;
+  padding: 0 18px;
+  margin-top: 390px;
+  .hot_title,
+  .hot_description {
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(81, 85, 91, 1);
+  }
+  .hot_description {
+    font-weight: 500;
+    font-size: 14px;
+  }
+}

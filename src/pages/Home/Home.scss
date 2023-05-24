@@ -1,0 +1,130 @@
+@import "../../variables.scss";
+
+.main_page {
+  padding-bottom: 40px;
+  .all_hotels_section {
+    margin-top: 50px;
+  }
+  background-color: #fafafa;
+}
+
+.main_wrapper.wrapper {
+  align-items: stretch;
+  justify-content: center;
+  .container {
+    margin: 0;
+  }
+}
+
+.filter_box {
+  padding: 40px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  margin-right: 16px;
+
+  box-shadow: 0px 2px 16px 0px rgba(167, 182, 207, 0.12);
+
+  box-shadow: 0px 4px 8px 0px rgba(89, 99, 117, 0.151);
+}
+
+.main_container.container {
+}
+
+.filter_content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.filter_title {
+  font-family: GT Walsheim Pro;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-radius: 4px;
+  padding: 4px 8px;
+  width: fit-content;
+  color: #fff;
+  margin-bottom: 16px;
+  background-color: rgba(56, 128, 243, 1);
+}
+
+.filter_row {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  padding: 24px 0;
+  border-bottom: dashed 2px rgba(132, 143, 150, 1);
+  &.no-border {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .range-slider__thumb {
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border: solid 5px rgba(94, 178, 21, 1);
+  }
+  .range-slider {
+    height: 4px;
+    background-color: rgba(93, 171, 34, 0.2);
+  }
+  .range-slider__range {
+    background-color: rgba(94, 178, 21, 1);
+  }
+  img {
+    max-width: 22px;
+  }
+}
+
+.icon_row.row {
+  justify-content: flex-start;
+  column-gap: 14px;
+}
+
+.price_range {
+  flex-direction: column !important;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.price_row {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  input {
+    border-bottom: solid 1px rgb(225, 225, 225);
+  }
+}
+
+.price-box {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-radius: 8px;
+  border: solid 2px rgba(0, 0, 0, 0.24);
+
+  .price-col-title {
+    font-family: GT Walsheim Pro;
+    font-size: $base-font;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.24);
+  }
+
+  .price-col {
+    width: 50%;
+    padding: 10px 15px;
+    &.left {
+      border-right: solid 2px rgba(0, 0, 0, 0.24);
+    }
+  }
+}

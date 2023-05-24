@@ -1,0 +1,52 @@
+@import "../../variables.scss";
+footer {
+  background-color: rgba(40, 44, 49, 0.91);
+  color: #fff;
+  padding: 30px;
+  a {
+    color: #fff;
+    font-family: GT Walsheim Pro;
+    font-size: $base-font;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.footer_wrapper {
+  column-gap: 80px;
+}
+
+.footer_title {
+  font-family: GT Walsheim Pro;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.footer_1 {
+  .footer_box {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 12px;
+    }
+  }
+}
+
+.footer_box {
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+}
+
+.media_box {
+  display: flex;
+  column-gap: 20px;
+}

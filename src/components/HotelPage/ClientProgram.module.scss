@@ -1,0 +1,99 @@
+@import "../../variables.scss";
+
+.program_box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.program_day_box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0px 2px 16px 0px rgba(167, 182, 207, 0.12);
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: 0px 2px 16px 0px rgba(167, 182, 207, 0.5);
+  }
+
+  &.close {
+    row-gap: 0;
+    .bird_btn {
+      transform: rotate(0);
+      transition: 0.2s;
+    }
+    .points_box {
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.points_box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  max-height: 10000px;
+}
+
+.day_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: GT Walsheim Pro;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $base-green;
+  cursor: pointer;
+}
+
+.point_time {
+  font-family: GT Walsheim Pro;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $base-green;
+  margin-bottom: 5px;
+}
+
+.point_title {
+  font-family: GT Walsheim Pro;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $black;
+  margin-bottom: 8px;
+}
+
+.point_desc {
+  font-family: GT Walsheim Pro;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $sec-gray;
+}
+
+.bird_btn {
+  transform: rotate(180deg);
+  transition: 0.2s;
+  padding: 5px;
+  path {
+    transition: 0.2s;
+  }
+  &:hover {
+    path {
+      stroke: $base-blue;
+    }
+  }
+}

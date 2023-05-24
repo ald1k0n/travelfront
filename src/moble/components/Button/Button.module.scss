@@ -1,0 +1,24 @@
+.btn_orange,
+.btn_primary,
+.btn_bordered {
+  margin-top: 14px;
+  background: rgba(242, 165, 16, 1);
+  border-radius: 16px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btn_primary {
+  background: rgba(94, 178, 21, 1);
+}
+.btn_bordered {
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(94, 178, 21, 1);
+  color: rgba(94, 178, 21, 1);
+}
