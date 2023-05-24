@@ -2,7 +2,7 @@ import React from "react";
 
 import style from "./Card.module.scss";
 import HotelStars from "../../../components/HotelStars/HotelStars";
-import { RatingBox } from "../../../components/HotelCard/HotelCard";
+import RatingBox from "../../../components/HotelCard/HotelCard";
 import tag from "../../../assets/tag.svg";
 import line from "../../../assets/line.svg";
 import { Button } from "../Button/Button";
