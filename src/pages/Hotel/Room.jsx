@@ -51,20 +51,29 @@ const Room = ({
       }}
     >
       <div className="rooms_top">
-        <img src={roompic} pic alt="" />
+        <img src={room?.img[0] || roompic} pic alt="" className="room_img" />
         <div className="room_top-content">
           {room?.roomName}
           <div className="additional_tag">
             <AdditionalTag text={`${bedCount} кровати`} img={bed} />
-            {hasExtraPlaces ? (
+            {room?.totalExtraPlacesAmount ? (
               <AdditionalTag
-                text={`${extraPlaces} доп. ${declOfNum(extraPlaces, [
-                  "место",
-                  "места",
-                  "мест",
-                ])}`}
+                text={`${room?.totalExtraPlacesAmount} доп. ${declOfNum(
+                  extraPlaces,
+                  ["место", "места", "мест"]
+                )}`}
                 img={green_bed}
                 green
+              />
+            ) : null}
+            {room?.usedFreeBabyPlaces > 0 ? (
+              <AdditionalTag
+                text={`${room?.usedFreeBabyPlaces} беспл. ${declOfNum(
+                  room?.usedFreeBabyPlaces,
+                  ["место", "места", "мест"]
+                )} для млад.`}
+                img={green_bed}
+                yellow
               />
             ) : null}
           </div>
@@ -72,24 +81,26 @@ const Room = ({
         </div>
       </div>
 
-      {hasExtraPlaces && !room?.extraFoodIncluded ? (
+      {hasExtraPlaces ? (
         <div className="rooms_mid">
           <div className="rooms_mid-col left">
             <div className="rooms_mid-col-top">
               Этот номер с дополнительными местами.
             </div>
-            <div className="rooms_mid-col-bot">
-              <div
-                className="filter_content"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  changeExtraFood();
-                }}
-              >
-                <CheckBtn isActive={extraFoodActive} />
-                Учитывать питание
+            {!room?.extraFoodIncluded && (
+              <div className="rooms_mid-col-bot">
+                <div
+                  className="filter_content"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    changeExtraFood();
+                  }}
+                >
+                  <CheckBtn isActive={extraFoodActive} />
+                  Учитывать питание
+                </div>
               </div>
-            </div>
+            )}
           </div>
           <div className="rooms_mid-col">
             <div className="rooms_extraprice-row"></div>

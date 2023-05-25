@@ -17,6 +17,7 @@ import GalleryBox from "../../components/Slider/GalleryBox";
 
 import secondary from "../../assets/camp/campsecondary.png";
 import room from "../../assets/hotel/hotelmain.png";
+import dateConfig from "../../components/DataConfig";
 
 const AddRoom = ({ fetchedRoomData, editMode }) => {
   const dispatch = useDispatch();
@@ -636,12 +637,14 @@ const AddRoom = ({ fetchedRoomData, editMode }) => {
                 <table className="periods_table">
                   <thead>
                     <tr>
-                      <th>Room</th>
+                      <th>Номер</th>
                       {console.log(fetchedRoomData, "fetchedRoomData")}
                       {hotelPeriods?.map((period) => (
                         <th key={period._id}>
-                          {period.startDay}/{period.startMonth} -{" "}
-                          {period.endDay}/{period.endMonth}
+                          {dateConfig(period.startDay)}/
+                          {dateConfig(period.startMonth)} -{" "}
+                          {dateConfig(period.endDay)}/
+                          {dateConfig(period.endMonth)}
                         </th>
                       ))}
                     </tr>

@@ -238,28 +238,26 @@ const Filter = ({ mode, dashMode }) => {
     };
 
     dispatch(setSearchData(newSearchData));
-  };
 
-  useEffect(() => {
     switch (mode) {
       case "tour":
-        applyFilter(applyTourFilter);
+        applyFilter(applyTourFilter, newSearchData);
         break;
       case "hotel":
-        applyFilter(applyHotelFilter);
+        applyFilter(applyHotelFilter, newSearchData);
         break;
       case "sanatorium":
-        applyFilter(applySanatoriumFilter);
+        applyFilter(applySanatoriumFilter, newSearchData);
         break;
       case "camp":
-        applyFilter(applyCampFilter);
+        applyFilter(applyCampFilter, newSearchData);
         break;
       default:
         break;
     }
-  }, [searchData]); // Add searchData as a dependency to trigger the effect whenever it changes
+  };
 
-  function applyFilter(filterFunction) {
+  function applyFilter(filterFunction, searchData) {
     const updatedSearchData = {
       ...searchData,
       locationId: searchData.locationId,
@@ -456,7 +454,7 @@ const Filter = ({ mode, dashMode }) => {
             })
           : null}
       </div>
-      {mode === "hotel" || mode === "sanatorium" ? (
+      {mode === "hotel" ? (
         <div className="filter_row">
           <div className="filter_title">Доп. места</div>
           <FilterBtn

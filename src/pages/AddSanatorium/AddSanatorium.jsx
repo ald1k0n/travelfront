@@ -29,6 +29,7 @@ import ServiceSelector from "../AddHotel/Selector";
 
 import { useUploadImageMutation } from "../../features/services/upload.service";
 import GalleryBox from "../../components/Slider/GalleryBox";
+import e from "cors";
 import Periods from "../AddHotel/Periods";
 import {
   addSanatorium,

@@ -162,10 +162,10 @@ export const baseApi = createApi({
       invalidatesTags: [{ id: "LIST", type: "Camp" }],
     }),
     getRoomByHotelIdLimit: builder.query({
-      query: ({ limit, hotelId, capacity }) => ({
+      query: ({ limit, hotelId, capacity, agesArray }) => ({
         url: `/hotels/${hotelId}/room?limit=${limit}&capacity=${
           capacity ? capacity : ""
-        }`,
+        }&agesArray=${agesArray ? agesArray : ""}`,
       }),
       providesTags: (result) =>
         result

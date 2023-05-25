@@ -321,8 +321,25 @@ const AddHotel = ({
               <div className="gen_title">Основное об отеле</div>
 
               {editMode && (
-                <div className="toggler-box">
-                  <div>Отображать при поиске</div>
+                <div
+                  className="toggler-box"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "14px",
+                      marginRight: "5px",
+                      fontWeight: "500",
+                      width: "fit-content",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    Отображать при поиске
+                  </div>
                   <label class="switch">
                     <input
                       type="checkbox"
@@ -430,7 +447,8 @@ const AddHotel = ({
                 name=""
                 id=""
                 cols="30"
-                rows="5"
+                rows="15"
+                style={{ height: "100%" }}
                 value={hotelData.description}
                 placeholder="Описание"
                 onChange={(e) =>

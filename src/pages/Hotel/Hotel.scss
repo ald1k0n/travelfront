@@ -4,10 +4,6 @@
   background-color: #ebebeb;
 }
 
-.hotel_container.container {
-  max-width: 1200px;
-}
-
 .hotel_side-checksum {
   margin: 16px 0 4px;
   display: flex;
@@ -405,6 +401,7 @@
 
 .desc-row {
   color: rgba(85, 85, 85, 1);
+  white-space: pre-wrap;
 }
 
 .food-row.row {

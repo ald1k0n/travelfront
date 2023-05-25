@@ -28,13 +28,14 @@ const RoomRow = ({
       JSON.stringify(oldPeriodPrices?.map((el) => el.roomPrice))
     )
       setIsChanged(true);
+    else setIsChanged(false);
   }, [newPeriodPrices, oldPeriodPrices]);
 
-  // console.log(
-  //   JSON.stringify(newPeriodPrices?.map((el) => el.roomPrice)),
-  //   JSON.stringify(oldPeriodPrices.map((el) => el.roomPrice)),
-  //   "change"
-  // );
+  console.log(
+    JSON.stringify(newPeriodPrices?.map((el) => el.roomPrice)),
+    JSON.stringify(oldPeriodPrices?.map((el) => el.roomPrice)),
+    "change"
+  );
 
   return (
     <>

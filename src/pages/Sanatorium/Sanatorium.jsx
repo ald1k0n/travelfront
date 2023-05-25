@@ -13,14 +13,10 @@ import { addOrder } from "../../features/order/orderSlice";
 
 import geo from "../../assets/geo.svg";
 import map from "../../assets/map.svg";
-import tag from "../../assets/tag.svg";
 import clock from "../../assets/clock.svg";
-import check from "../../assets/check.svg";
-import person from "../../assets/person.svg";
 import kids from "../../assets/kids.png";
 import divider from "../../assets/hotel/divider.svg";
 
-import hotel from "../../assets/hotel.png";
 import "../Hotel/Hotel.scss";
 import Room from "../Hotel/Room";
 import Excursions from "../../components/Excursions/Excursions";
@@ -73,31 +69,6 @@ const Sanatorium = () => {
         ? JSON.parse(localStorage.getItem("agesArray")).length
         : null,
     });
-
-  // const [
-  //   getData,
-  //   // {
-  //   //   data: recommendation,
-  //   //   isLoading: recommendationIsLoading,
-  //   // },
-  // ] = useGetHotelsByTagMutation();
-
-  // const [recommendation, setRecommendation] = useState([]);
-
-  // useEffect(() => {
-  //   getData({
-  //     food:
-  //       singleSanatorium && singleSanatorium.food && singleSanatorium.food._id,
-  //     comforts:
-  //       singleSanatorium &&
-  //       singleSanatorium.comforts &&
-  //       singleSanatorium.comforts,
-  //     sanatoriumServices:
-  //       singleSanatorium &&
-  //       singleSanatorium.sanatoriumServices &&
-  //       singleSanatorium.sanatoriumServices,
-  //   }).then((res) => setRecommendation(res.data));
-  // }, [singleSanatorium]);
 
   useEffect(() => {
     if (isError) {
@@ -359,13 +330,6 @@ const Sanatorium = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div className="hotel_page-price shadowed_box">
-                  <BodyTitle
-                    title="Цена"
-                    text="Выберите что хотите добавить в свой тур, чтобы рассчитать
-                      стоимость и сравните периоды"
-                  />
-                </div> */}
                 <div className="hotel_page-gen shadowed_box">
                   {clientRoom?._id ? (
                     <>
@@ -443,7 +407,95 @@ const Sanatorium = () => {
                       title="Услуги санатория"
                     />
                   ) : null}
-                  {/* <img src={divider} alt="" />
+
+                  <img src={divider} alt="" />
+                  <div className="hotel_page-rooms" id="room_anchor">
+                    <BodyTitle
+                      title="Варианты номеров"
+                      text="Выберите номер, который вам нравится и мы автоматически
+                        рассчитаем цену в блоке “Бронирование”"
+                    />
+                    {roomsData &&
+                      roomsData.map((room) => {
+                        return (
+                          <Room
+                            // setRoomId={setPriceData}
+                            key={room._id}
+                            room={room}
+                            active={clientRoom?._id === room._id}
+                            changeExtraFood={changeExtraFood}
+                            extraFoodActive={priceData.addExtraFood}
+                            hasExtraPlaces={
+                              room?.capacity <
+                              JSON.parse(localStorage.getItem("agesArray"))
+                                .length
+                            }
+                            extraPlaces={
+                              JSON.parse(localStorage.getItem("agesArray"))
+                                .length - room?.capacity
+                            }
+                          />
+                        );
+                      })}
+                  </div>
+                  {roomCount < 100 ? (
+                    <div className="load-more-row">
+                      <button
+                        className="load-more-btn"
+                        onClick={() => setRoomCount((prev) => prev + 100)}
+                      >
+                        Показать остальные
+                      </button>
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+
+              <div className="hotel_side_wrapper wrapper ver">
+                <Sum
+                  price={price}
+                  priceData={priceData}
+                  clientRoom={clientRoom}
+                  priceIsLoading={priceIsLoading}
+                  orderTerms={orderTerms}
+                />
+
+                {singleSanatorium?.locationId?._id ? (
+                  <Excursions
+                    locationId={singleSanatorium?.locationId?._id}
+                    refetch={refetch}
+                  />
+                ) : (
+                  "Экскурсии загружаются"
+                )}
+
+                <ExpandableText
+                  locationName={singleSanatorium?.locationId?.locationName}
+                  locationDescription={
+                    singleSanatorium?.locationId?.locationDescription
+                  }
+                />
+
+                <div className="kids_box">
+                  <img src={kids} alt="" />
+                </div>
+              </div>
+            </div>
+          ) : null}
+        </div>
+      </section>
+      {/* <Recommendation
+        recommendation={recommendation}
+        singleSanatorium={singleSanatorium}
+      /> */}
+    </div>
+  );
+};
+
+export default Sanatorium;
+
+{
+  /* <img src={divider} alt="" />
                   <div className="hotel_food-row">
                     <div className="body_title-box">
                       <div className="body_title">
@@ -573,89 +625,40 @@ const Sanatorium = () => {
                         </div>
                       </div>
                     </div>
-                  </div> */}
-                  <img src={divider} alt="" />
-                  <div className="hotel_page-rooms" id="room_anchor">
-                    <BodyTitle
-                      title="Варианты номеров"
-                      text="Выберите номер, который вам нравится и мы автоматически
-                        рассчитаем цену в блоке “Бронирование”"
-                    />
-                    {roomsData &&
-                      roomsData.map((room) => {
-                        return (
-                          <Room
-                            // setRoomId={setPriceData}
-                            key={room._id}
-                            room={room}
-                            active={clientRoom?._id === room._id}
-                            changeExtraFood={changeExtraFood}
-                            extraFoodActive={priceData.addExtraFood}
-                            hasExtraPlaces={
-                              room?.capacity <
-                              JSON.parse(localStorage.getItem("agesArray"))
-                                .length
-                            }
-                            extraPlaces={
-                              JSON.parse(localStorage.getItem("agesArray"))
-                                .length - room?.capacity
-                            }
-                          />
-                        );
-                      })}
-                  </div>
-                  {roomCount < 100 ? (
-                    <div className="load-more-row">
-                      <button
-                        className="load-more-btn"
-                        onClick={() => setRoomCount((prev) => prev + 100)}
-                      >
-                        Показать остальные
-                      </button>
-                    </div>
-                  ) : null}
-                </div>
-              </div>
+                  </div> */
+}
 
-              <div className="hotel_side_wrapper wrapper ver">
-                <Sum
-                  price={price}
-                  priceData={priceData}
-                  clientRoom={clientRoom}
-                  priceIsLoading={priceIsLoading}
-                  orderTerms={orderTerms}
-                />
+// const [
+//   getData,
+//   // {
+//   //   data: recommendation,
+//   //   isLoading: recommendationIsLoading,
+//   // },
+// ] = useGetHotelsByTagMutation();
 
-                {singleSanatorium?.locationId?._id ? (
-                  <Excursions
-                    locationId={singleSanatorium?.locationId?._id}
-                    refetch={refetch}
+// const [recommendation, setRecommendation] = useState([]);
+
+// useEffect(() => {
+//   getData({
+//     food:
+//       singleSanatorium && singleSanatorium.food && singleSanatorium.food._id,
+//     comforts:
+//       singleSanatorium &&
+//       singleSanatorium.comforts &&
+//       singleSanatorium.comforts,
+//     sanatoriumServices:
+//       singleSanatorium &&
+//       singleSanatorium.sanatoriumServices &&
+//       singleSanatorium.sanatoriumServices,
+//   }).then((res) => setRecommendation(res.data));
+// }, [singleSanatorium]);
+
+{
+  /* <div className="hotel_page-price shadowed_box">
+                  <BodyTitle
+                    title="Цена"
+                    text="Выберите что хотите добавить в свой тур, чтобы рассчитать
+                      стоимость и сравните периоды"
                   />
-                ) : (
-                  "Экскурсии загружаются"
-                )}
-
-                <ExpandableText
-                  locationName={singleSanatorium?.locationId?.locationName}
-                  locationDescription={
-                    singleSanatorium?.locationId?.locationDescription
-                  }
-                />
-
-                <div className="kids_box">
-                  <img src={kids} alt="" />
-                </div>
-              </div>
-            </div>
-          ) : null}
-        </div>
-      </section>
-      {/* <Recommendation
-        recommendation={recommendation}
-        singleSanatorium={singleSanatorium}
-      /> */}
-    </div>
-  );
-};
-
-export default Sanatorium;
+                </div> */
+}

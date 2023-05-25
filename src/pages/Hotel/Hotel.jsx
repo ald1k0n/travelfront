@@ -53,13 +53,16 @@ const Hotel = () => {
 
   const [roomCount, setRoomCount] = useState(3);
 
+  const { searchData } = useSelector((state) => state.search);
+
   const { data: roomsData, isLoading: roomIsLoading } =
     useGetRoomByHotelIdLimitQuery({
       hotelId,
       limit: roomCount,
-      capacity: localStorage.getItem("agesArray")
-        ? JSON.parse(localStorage.getItem("agesArray")).length
-        : null,
+      agesArray: searchData.agesArray,
+      // capacity: localStorage.getItem("agesArray")
+      //   ? JSON.parse(localStorage.getItem("agesArray")).length
+      //   : null,
     });
 
   const [
@@ -167,7 +170,6 @@ const Hotel = () => {
       roomId: clientRoom?._id,
     }));
   }, [clientRoom]);
-  const { searchData } = useSelector((state) => state.search);
 
   useEffect(() => {
     const storedAgesArray = JSON.parse(localStorage.getItem("agesArray"));
