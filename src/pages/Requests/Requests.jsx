@@ -272,6 +272,14 @@ const Requests = () => {
               <h3>Дополнительная информация</h3>
               <p>{order?.extraInfo}</p>
             </div>
+            <div className="order-details__item">
+              <h3>Цена без маржи</h3>
+              <p>{Number(order?.sum) / 1.1}</p>
+            </div>
+            <div className="order-details__item">
+              <h3>Цена с маржой</h3>
+              <p>{Number(order?.sum)}</p>
+            </div>
           </div>
         </div>
       </Modal>
