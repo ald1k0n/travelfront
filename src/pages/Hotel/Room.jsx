@@ -51,15 +51,20 @@ const Room = ({
       }}
     >
       <div className="rooms_top">
-        <img src={room?.img[0] || roompic} pic alt="" className="room_img" />
+        <img
+          src={room?.img.length > 0 ? room?.img[0] : roompic}
+          pic
+          alt=""
+          className="room_img"
+        />
         <div className="room_top-content">
           {room?.roomName}
           <div className="additional_tag">
             <AdditionalTag text={`${bedCount} кровати`} img={bed} />
-            {room?.totalExtraPlacesAmount ? (
+            {room?.usedExtraPlaces ? (
               <AdditionalTag
-                text={`${room?.totalExtraPlacesAmount} доп. ${declOfNum(
-                  extraPlaces,
+                text={`${room?.usedExtraPlaces} доп. ${declOfNum(
+                  room?.usedExtraPlaces,
                   ["место", "места", "мест"]
                 )}`}
                 img={green_bed}

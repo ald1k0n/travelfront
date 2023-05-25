@@ -7,6 +7,7 @@ import Loader from "../Loader";
 import check from "../../assets/check.svg";
 import person from "../../assets/person.svg";
 import SumLoader from "../SumLoader";
+import { addOrder } from "../../features/order/orderSlice";
 
 const Sum = ({
   price,
@@ -18,6 +19,8 @@ const Sum = ({
   priceError,
   priceHasError,
 }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const formatter = Intl.NumberFormat("ru-RU");
   const handleOrder = (e) => {
     e.preventDefault();

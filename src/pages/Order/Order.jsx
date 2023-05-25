@@ -57,8 +57,8 @@ const Order = () => {
   useEffect(() => {
     setClientData({
       ...clientData,
-      startDate: window.localStorage.getItem("startDate"),
-      endDate: window.localStorage.getItem("endDate"),
+      startDate: window.localStorage.getItem("start"),
+      endDate: window.localStorage.getItem("end"),
       peopleAmount: window.localStorage.getItem("peopleAmount"),
       daysAmount: window.localStorage.getItem("daysAmount"),
       hotel: window.localStorage.getItem("hotel"),
